@@ -13,8 +13,10 @@ export default function SuggestedCity({
   function handleCityClickHelper(city) {
     handleClick(true);
     handleCityClick(city);
-    setTimeout(() => handleRemoved(true), 2000);
-    setTotalCityCount(totalCityCount - 1);
+    setTimeout(() => {
+      handleRemoved(true);
+      setTotalCityCount(totalCityCount - 1);
+    }, 2000);
   }
   if (totalCityCount > 0) {
     return (
